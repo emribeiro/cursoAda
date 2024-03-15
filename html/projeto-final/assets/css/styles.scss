@@ -1,0 +1,376 @@
+//Variáveis
+$white: #FFFFFF;
+$black: #000000;
+$light-color: #F5F5F5;
+$low-priority: #848191;
+$primary: #A6F750;
+$secondary: #282162;
+$dark: #000036;
+$background: #0F1216;
+$navbar-bg: #181C23;
+$card-bg: #383C44;
+
+body, button, input, option{
+    font-family: "Poppins", sans-serif;  
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: $background;
+    color: $white;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    margin: 0 auto;
+    align-items: center;
+    background-color: $navbar-bg;
+    padding: 0 10rem;
+
+    &__brand{
+        color: $primary;
+        font-size: 1.75rem;
+        font-weight: 600;
+    }
+
+    &__list{
+        display: flex;
+        gap: 3.25rem;
+    }
+
+    &__item{
+        
+        a{
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: $white;
+        }
+
+        &--active{
+            a{
+                color: $primary;
+            }
+        }
+    }
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+.greetings{
+    display: flex;
+    align-items: center;
+    padding: 0 10rem;
+    margin-top: 7.5rem;
+
+    .greeting-left{
+        flex-grow: 1;
+        
+        &__hgroup{
+            max-width: 435px;
+            margin-bottom: 30px;
+        }
+
+        &__greet{
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        &__name{
+            font-size: 3.25rem;
+            font-weight: 600;
+            color: $light-color;
+            margin-bottom: 6px;
+        }
+
+        &__description{
+            font-size: 1.125rem;
+            line-height: 1.6;
+
+        }
+
+
+    }
+
+    .greeting-right{
+        justify-content: flex-end;
+    }
+}
+
+.about-me{
+
+    max-width: 1032px;
+    margin-top: 7rem;
+
+    &__info-title{
+        color: $primary;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    &__info-description{
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 32px;
+        margin-bottom: 8px;
+    }
+
+    &__experience{
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        gap: 22px;
+    }
+
+    &__experience-time{
+        font-size: 6rem;
+        color: $primary;
+        font-weight: 600;
+    }
+
+    &__experience-description{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    &__skills{
+        display: flex;
+        gap: 20px;
+        margin-top: 18px;
+    }
+
+}
+
+.services{
+    margin-top: 7rem;
+    max-width: 1066px;
+    width: 100%;
+    margin-bottom: 84px;
+
+    &__title{
+        font-size: 2rem;
+        color: $primary;
+        font-weight: 600;
+        margin-bottom: 54px;
+    }
+
+    &__card-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    &__card{
+        width: 280px;
+        height: 280px;
+        border: 3px solid $white;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+        padding: 24px;
+        
+        &>h2{
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        &>p{
+            font-size: 1.06rem;
+            font-weight: 400;
+        }
+    }
+
+    &__card:nth-child(odd){
+        width: 280px;
+        height: 280px;
+        border: 3px solid $primary;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+        padding: 24px;
+        
+        &>h2{
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        &>p{
+            font-size: 1.06rem;
+            font-weight: 400;
+        }
+    }
+
+    &__card:nth-child(even){
+        width: 280px;
+        height: 280px;
+        border: 3px solid $white;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+        padding: 24px;
+        
+        &>h2{
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: $primary;
+        }
+
+        &>p{
+            font-size: 1.06rem;
+            font-weight: 400;
+        }
+    }
+}
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+    width: 100%;
+    max-width: 1066px;
+
+
+    &__info-title{
+        font-size: 2rem;
+        font-weight: 600;
+        color: $primary;
+        margin-bottom: 26px;
+    }
+
+    &__description{
+        font-size: 1.125rem;
+        margin-bottom: 16px;
+    }
+
+    &__icon-list{
+        padding-left: 16px;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+    &__form-title{
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+    }
+}
+
+.footer{
+    background-color: $navbar-bg;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    color: $light-color;
+
+    &__container{
+        max-width: 1064px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__list{
+        display: flex;
+        gap: 32px;
+       
+    }
+}
+
+
+//Components
+
+.button{
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 0px;
+    
+    &--primary{
+        background-color: $primary;
+        font-weight: 600;
+    }
+
+    &--medium{
+        width: 174px;
+    }
+    
+}
+
+.card{
+
+    &__skills{
+        width: 256px;
+        height: 254px;
+        border: 2px solid $black;
+        background-color: $card-bg;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        padding: 1.5rem;
+    }
+
+    &__skills-title{
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 32px;
+        margin-top: 16px;
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &__item{
+        height: 62px;
+        width: 472px;
+        background-color: $card-bg;
+        border: 1px solid $card-bg;
+        border-radius: 8px;
+        padding: 16px;
+    }
+
+    &__item--large{
+        height: 98px;
+    }
+
+    textarea{
+        font-family: "Poppins", sans-serif;  
+        padding: 16px;
+        color: $low-priority;
+    }
+
+    textarea:focus, input:focus{
+        outline: none;
+        background-color: rgba($color: $low-priority, $alpha: 0.5)
+    }
+}
+
+
